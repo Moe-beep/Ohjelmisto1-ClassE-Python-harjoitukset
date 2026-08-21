@@ -3,13 +3,16 @@
 **Myint Moe**
 
 ## Moduuli 1
-Olen tehnyt tehtävät 1 ja 2
-
+Olen tehnyt tämän.
 
 ## Moduuli 2
+Olen tehnyt tämän.
 
+## Moduuli 3
+Olen tehnyt kaikki 6 tehtävää.
 
-## Moduuli 3 ja niin edelleen...
+## Projekti1
+Olen parhaillaan tekemässä.
 
 ...
 ...
