@@ -1,3 +1,4 @@
+## Kysy käyttäjältä kolme lukua ja laske niiden summa
 print("Anna ensimmäinen luku: ")
 num1 = float(input())
 
