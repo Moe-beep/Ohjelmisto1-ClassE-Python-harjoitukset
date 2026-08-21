@@ -11,7 +11,7 @@ Olen tehnyt tämän.
 ## Moduuli 3
 Olen tehnyt kaikki 6 tehtävää.
 ### Peliprojekti
-Olen parhaillaan tekemässä.
+Olen tehnyt pelinprojektin ensimaisen osan.
 
 ...
 ...
