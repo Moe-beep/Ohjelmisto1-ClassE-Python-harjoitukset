@@ -1,6 +1,6 @@
 ##Kysy nimi käyttäjältä
 print("Mikä sinun nimesi on?")
-nimi = input()
+nimi = str(input())
 print("Hei " + nimi + "! Tervetuloa peliin!!")
 
 print("Mikä on sinun ikäsi?")
