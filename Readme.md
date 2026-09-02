@@ -10,11 +10,17 @@ Olen tehnyt tämän.
 
 ## Moduuli 3
 Olen tehnyt kaikki 6 tehtävää.
-### Peliprojekti
+### Peliprojekti 1
 Olen tehnyt pelinprojektin ensimaisen osan.
 
 ## Moduuli 4
-
 Olen tehnyt kaikki tehtävää.
+
+## Moduuli 5
+Olen tehnyt kaikki tehtävää.
+### Peliprojekti 2
+Olen tehnyt pelinprojektin toinen osan.
+
+## Moduuli 6
 ...
 ...
