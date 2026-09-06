@@ -22,5 +22,11 @@ Olen tehnyt kaikki tehtävää.
 Olen tehnyt pelinprojektin toinen osan.
 
 ## Moduuli 6
+Olen tehnyt kaikki tehtävää.
+
+## Moduuli 7
+Olen tehnyt kaikki tehtävää.
+### Peliprojekti 3
+Olen parhaillaan tekemässä sitä.
 ...
 ...
