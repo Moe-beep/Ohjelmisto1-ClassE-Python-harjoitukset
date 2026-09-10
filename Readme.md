@@ -27,6 +27,9 @@ Olen tehnyt kaikki tehtävää.
 ## Moduuli 7
 Olen tehnyt kaikki tehtävää.
 ### Peliprojekti 3
-Olen parhaillaan tekemässä sitä.
+lisätty joitakin funktiot
+
+## Moduuli 8
+Olen parhaillaan tekemässä niitä.
 ...
 ...
