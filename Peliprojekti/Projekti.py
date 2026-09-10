@@ -1,10 +1,47 @@
+##Ahhhhhh, mun Rahaaaaaaaaaaa
+def minus_raha(money, amount):
+    money = money - amount
+    return money
+
+##Moi Moi peli
+def quit():
+    print("Kiitos pelaamisesta!!")
+    exit()
+
+##Tarkistus funktio
+def invalid_tarkistu(input):
+    if(str(input) == ""):
+        print("Virheellinen vastaus!!")
+        return True
+    return False
+
+
+##Have not implemented them funtions in game yet, COMING SOON!!!
+##Lisää listaan
+def add_to_list(item,list):
+    list.append(item)
+    return list
+##Tulosta listasta
+def print_list(list):
+    for item in list:
+        print(item)
+
+
+
 
 while True:
     ##Kysy nimi käyttäjältä
     print("Mikä sinun nimesi on?")
     nimi = str(input())
+    if invalid_tarkistu(nimi):
+        continue
+
     print("Mikä on sinun ikäsi?")
     ika = int(input())
+    if invalid_tarkistu(ika):
+        continue
+
+    ##Kysy käyttäjän ika
     if(ika < 12):
         print("Sinä olet liian nuori!!!")
         break
@@ -45,7 +82,7 @@ while True:
         type = str(input("Yes tai No!!  "))
 
         if(type.lower() == "yes"):
-            money = money - 200
+            money = minus_raha(money, 200)
             print("Okei, hyvä on. Aion nukkua mukavasti!!")
             ##This quit is just ffor testing, it will be removed later
             quit()
