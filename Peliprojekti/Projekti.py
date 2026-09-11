@@ -6,6 +6,7 @@ def minus_raha(money, amount):
 ##Moi Moi peli
 def quit():
     print("Kiitos pelaamisesta!!")
+    print_list(osto_lista)
     exit()
 
 ##Tarkistus funktio
@@ -13,6 +14,8 @@ def invalid_tarkistu(input):
     if(str(input) == ""):
         print("Virheellinen vastaus!!")
         return True
+    elif(str(input).lower() == "quit"):
+        quit()
     return False
 
 
@@ -23,8 +26,11 @@ def add_to_list(item,list):
     return list
 ##Tulosta listasta
 def print_list(list):
+    if(len(list) == 0):
+        print("OstoLista on tyhjä!!")
     for item in list:
         print(item)
+    
 
 
 
@@ -75,6 +81,8 @@ while True:
         else:
             print("Virheellinen vastaus!")
 
+    ##Osto Lista
+    osto_lista = []
     ##Ask to buy bed
     print("Ensin tarvitsemme sängyn.")
     print("Löysin tämän sängyn 200 eurolla, ostetaan se")
@@ -84,6 +92,7 @@ while True:
         if(type.lower() == "yes"):
             money = minus_raha(money, 200)
             print("Okei, hyvä on. Aion nukkua mukavasti!!")
+            add_to_list("Sängy", osto_lista)
             ##This quit is just ffor testing, it will be removed later
             quit()
             break
