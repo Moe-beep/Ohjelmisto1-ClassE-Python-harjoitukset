@@ -30,6 +30,9 @@ Olen tehnyt kaikki tehtävää.
 lisätty joitakin funktiot
 
 ## Moduuli 8
+Olen tehnyt kaikki tehtävää.
+
+## Moduuli 9
 Olen parhaillaan tekemässä niitä.
 ...
 ...
