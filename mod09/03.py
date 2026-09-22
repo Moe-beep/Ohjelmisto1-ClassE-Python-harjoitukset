@@ -8,6 +8,7 @@ class Car:
     def kiihdytä(self, speed):
         self.cs += speed
 
+
     def drive(self, time):
         distance = time * self.cs
         self.td += distance

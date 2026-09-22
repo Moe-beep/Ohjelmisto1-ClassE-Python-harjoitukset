@@ -39,6 +39,9 @@ Olen tehnyt kaikki tehtävää.
 Olen tehnyt kaikki tehtävää.
 
 ## Moduuli 11
+Olen tehnyt kaikki tehtävää.
+
+## Moduuli 12
 Olen parhaillaan tekemässä niitä.
 ...
 ...
