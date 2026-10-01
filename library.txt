@@ -1,0 +1,11 @@
+Nimi: Helsingin Sanomat
+Lainassa: Saatavilla
+Lainauksessa: Kyllä
+Päätoimittaja: Päätoimittaja1
+
+Nimi: Python-ohjelmointi
+Lainassa: Lainassa
+Lainauksessa: Ei
+Kirjoittaja: Kirjoittaja1
+Sivumäärä: 300
+
