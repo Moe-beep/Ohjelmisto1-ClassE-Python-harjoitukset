@@ -1,0 +1,2 @@
+Choose 1 to go left, 2 to go right, or 3 to quit.
+Your progress will be saved automatically.

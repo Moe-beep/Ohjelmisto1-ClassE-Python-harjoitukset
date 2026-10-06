@@ -1,0 +1,10 @@
+Ok, let's stock up on supplies for our boat journey!"
+We are picking up trash and cleaning oil spills in the ocean."
+Let's choose the right tools and equipment for our mission."
+
+##choose supplies
+"I have "
+"1. Trash bags"
+"2. Oxygen Tanks"
+"3. Oil spill cleanup kit"
+"4. Spear gun"
