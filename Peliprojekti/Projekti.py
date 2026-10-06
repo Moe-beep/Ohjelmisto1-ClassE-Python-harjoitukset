@@ -1,16 +1,9 @@
 from functions import boat_task, boat_trash_cleanup, boat_oil_cleanup
-from functions import quit, add_to_list, invalid_tarkistu, completed_tasks, boat_supplies, submarine_supplies, Character
+from functions import submarine_task, submarine_monster_fight
+from functions import shark_task
+from functions import quit, add_to_list, invalid_tarkistu, completed_tasks, boat_supplies, submarine_supplies, Character, save_choice
 import random
 import os
-
-
-
-
-
-def shark_task():
-    print("Ok, We are going to call our shark friend to help us.")
-    print("You tapped the water and the shark cam immediately.")
-    print("let's fend off ilegal fishing boats")
 
 
 while True:
@@ -29,6 +22,12 @@ while True:
     if(ika < 6):
         print("You are too young to help me!!!")
         break
+
+    ##Writing name and age in file
+    with open(".\\Peliprojekti\\save.txt", "a") as f:
+        ika = str(ika)
+        f.write("\n" + "\n" + "name : " + nimi + "\n")
+        f.write("Age : " + ika + "\n")
 
     print()
     print("Hello " + nimi + "! Welcome to the game!!")
@@ -57,6 +56,7 @@ while True:
 
         ## the task for boat
         if choice == "1":
+            save_choice("Boat")
             print("You have chosen the boat. Let's go!")
             boat_task()
             boat_trash_cleanup()
@@ -64,15 +64,21 @@ while True:
             break
         ## the task for submarine
         elif choice == "2":
+            save_choice("Submarine")
             print("You have chosen the submarine. Let's go!")
+            submarine_task()
+            submarine_monster_fight()
             break
         ## the task for shark
         elif choice == "3":
+            save_choice("Shark")
             print("You have chosen the shark. Let's go!")
+            shark_task()
             break
         elif choice.lower() == "quit":
             quit()
         else:
             print("Invalid choice. Please choose 1, 2, or 3.")
+    break
 
 

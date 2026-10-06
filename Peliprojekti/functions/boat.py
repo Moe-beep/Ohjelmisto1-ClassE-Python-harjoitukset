@@ -1,5 +1,5 @@
 import os
-from .common import quit, add_to_list, completed_tasks, boat_supplies, invalid_tarkistu
+from .common import quit, add_to_list, completed_tasks, boat_supplies, save_equipment, save_tasks
 
 def boat_task():
     ##this print the loction of the file of the method
@@ -25,6 +25,7 @@ def boat_task():
             print("Spear gun added to your boat supplies.")
         else:
             print("Invalid choice. Please choose 1, 2, 3, or 4.")
+    save_equipment(boat_supplies)
     print("Ok! Supplies are ready! Let's Roll!!")
 
 def boat_trash_cleanup():
@@ -33,7 +34,6 @@ def boat_trash_cleanup():
 
     if "Trash bags" in boat_supplies:
         print("You have the trash bags. Let's start picking up the trash!")
-        print("Type 1 to pick up trashes.")
 
         i = 0
         while i<5:
@@ -49,6 +49,7 @@ def boat_trash_cleanup():
                 elif i == 5:
                     print("You have picked up all the trash! Great work!")
                     completed_tasks.append("Trash Cleanup")
+                    save_tasks(completed_tasks)
                     break
             elif pick_up.lower() == "quit":
                 quit()
@@ -80,6 +81,7 @@ def boat_oil_cleanup():
                 elif i == 5:
                     print("You have cleaned up all the oil spill! Great work!")
                     completed_tasks.append("Oil Spill Cleanup")
+                    save_tasks(completed_tasks)
                     break
             elif clean_up.lower() == "quit":
                 quit()

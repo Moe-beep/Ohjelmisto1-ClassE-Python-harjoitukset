@@ -6,12 +6,30 @@ class Character:
         self.scream = scream
 
 #save game
+def save_choice(name):
+    with open(".\\Peliprojekti\\save.txt", "a") as f:
+        f.write("Transport choice : " + name + "\n")
+
+def save_equipment(list):
+    line = ", ".join(list)
+    with open(".\\Peliprojekti\\save.txt", "a") as f:
+        f.write("Equipments : " + line)
+
+def save_tasks(list):
+    if len(list) > 0:
+        line += ", ".join(list)
+        with open(".\\Peliprojekti\\save.txt", "a") as f:
+            f.write("Completed tasks : " + line)
+    else:
+        with open(".\\Peliprojekti\\save.txt", "a") as f:
+            f.write("Completed tasks : None")
+
 def read_file(filename):
     with open(filename, "r")as file:
         return file.read()
     
 def save_game(name,age,completed_tasks):
-    with open("save.txt", "w")as file:
+    with open(".\\Peliprojekti\\save.txt", "w")as file:
         file.write(f"{name}\n{age}\n{','.join(completed_tasks)}")
 
 def load_game(filename):

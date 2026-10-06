@@ -1,4 +1,4 @@
-from .common import quit, add_to_list, completed_tasks, invalid_tarkistu, submarine_supplies, Character
+from .common import quit, add_to_list, completed_tasks, submarine_supplies, Character, save_equipment,save_tasks
 
 import random
 
@@ -31,6 +31,7 @@ def submarine_task():
             print("Extra fuel for the submarine added to your submarine supplies.")
         else:
             print("Invalid choice. Please choose 1, 2, 3, or 4.")
+    save_equipment(submarine_supplies)
     print("Ok! Supplies are ready! Let's Roll!!")
 
 def submarine_monster_fight():
@@ -52,6 +53,7 @@ def submarine_monster_fight():
                 if monster.health <= 0:
                     print("You have defeated the sea monster! Great job!")
                     completed_tasks.append("Sea Monster Fight")
+                    save_tasks(completed_tasks)
                     break
         elif attack.lower() == "quit":
             quit()
@@ -66,6 +68,7 @@ def submarine_refuel():
         print("You have the extra fuel for the submarine. Let's use it to refuel the submarine!")
         print("The submarine is refueled and we can continue our journey!")
         completed_tasks.append("Submarine Refuel")
+        save_tasks(completed_tasks)
     else:
         print("You don't have the extra fuel for the submarine. We can't refuel the submarine without it.")
         print("Let's head back to the surface and wait for rescue. Good job for trying!")
