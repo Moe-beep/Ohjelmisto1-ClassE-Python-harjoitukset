@@ -51,6 +51,7 @@ def shark_task():
                         break
     else:
         print("Invalid choice. Please choose 1 or 2.")
+        save_tasks(completed_tasks)
 
     print("Baby shark came back from fighting and you united with them")
     print("PHEWW!! Saved the ocean once again")

@@ -49,7 +49,6 @@ def boat_trash_cleanup():
                 elif i == 5:
                     print("You have picked up all the trash! Great work!")
                     completed_tasks.append("Trash Cleanup")
-                    save_tasks(completed_tasks)
                     break
             elif pick_up.lower() == "quit":
                 quit()
@@ -80,6 +79,7 @@ def boat_oil_cleanup():
                     print("We are almost done! You got this!")
                 elif i == 5:
                     print("You have cleaned up all the oil spill! Great work!")
+                    print("Saved the ocean once again!!HEHE!")
                     completed_tasks.append("Oil Spill Cleanup")
                     save_tasks(completed_tasks)
                     break
@@ -87,7 +87,9 @@ def boat_oil_cleanup():
                 quit()
             else:
                 print("Invalid choice. Please type 1 to clean up the oil spill.")
+                save_tasks(completed_tasks)
     else:
         print("You don't have the oil spill cleanup kit. We can't clean up the oil spill without it.")
-        print("Let's just head home and save the ocean another day. Good job for trying!") 
+        print("Let's just head home and save the ocean another day. Good job for trying!")    
+        save_tasks(completed_tasks)
 

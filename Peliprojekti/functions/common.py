@@ -11,34 +11,19 @@ def save_choice(name):
         f.write("Transport choice : " + name + "\n")
 
 def save_equipment(list):
+
     line = ", ".join(list)
     with open(".\\Peliprojekti\\save.txt", "a") as f:
-        f.write("Equipments : " + line)
+        f.write("Equipments : " + line + "\n")
 
 def save_tasks(list):
     if len(list) > 0:
-        line += ", ".join(list)
+        line =  ", ".join(list)
         with open(".\\Peliprojekti\\save.txt", "a") as f:
             f.write("Completed tasks : " + line)
     else:
         with open(".\\Peliprojekti\\save.txt", "a") as f:
             f.write("Completed tasks : None")
-
-def read_file(filename):
-    with open(filename, "r")as file:
-        return file.read()
-    
-def save_game(name,age,completed_tasks):
-    with open(".\\Peliprojekti\\save.txt", "w")as file:
-        file.write(f"{name}\n{age}\n{','.join(completed_tasks)}")
-
-def load_game(filename):
-    with open(filename, "r")as file:
-        data = file.read().splitlines()
-        name = data[0]
-        age = int(data[1])
-        completed_tasks = data[2].split(",")
-        return name, age, completed_tasks
 
 
 
@@ -59,7 +44,6 @@ def invalid_tarkistu(input):
     return False
 
 
-##Have not implemented them funtions in game yet, COMING SOON!!!
 ##Lisää listaan
 def add_to_list(item,list):
     list.append(item)

@@ -53,15 +53,16 @@ def submarine_monster_fight():
                 if monster.health <= 0:
                     print("You have defeated the sea monster! Great job!")
                     completed_tasks.append("Sea Monster Fight")
-                    save_tasks(completed_tasks)
+                    print("Oh no! We are running out tof fuel after attacking!")
+                    submarine_refuel()
                     break
         elif attack.lower() == "quit":
             quit()
         else:
             print("You don't have the spear gun. We can't fight the sea monster without it.")
             print("Let's run away!!")
-        print("Ohh no. We are running out of fuel for the submarine. We need to refuel the submarine to continue our journey.")
-        submarine_refuel()
+            print("Ohh no. We are running out of fuel for the submarine. We need to refuel the submarine to continue our journey.")
+            submarine_refuel()
 
 def submarine_refuel():
     if "Extra fuel for the submarine" in submarine_supplies:
@@ -72,3 +73,4 @@ def submarine_refuel():
     else:
         print("You don't have the extra fuel for the submarine. We can't refuel the submarine without it.")
         print("Let's head back to the surface and wait for rescue. Good job for trying!")
+        save_tasks(completed_tasks)
