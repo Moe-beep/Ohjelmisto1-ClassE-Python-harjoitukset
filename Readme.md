@@ -45,7 +45,7 @@ Olen tehnyt kaikki tehtävää.
 Olen tehnyt kaikki tehtävää.
 
 ## Moduuli 13
-Olen parhaillaan tekemässä niitä.
+Toteutin peliprojektiini tiedostojen – kuten save.txt:n ja ohjetiedosto info.txt:n – tallennustoiminnot. save.txt-tiedostoon lisätään pelaajan tietoja, ja info.txt sisältää päävalikon rivejä, joita hyödynnetään esimerkiksi Boat-, Submarine- ja Shark-tiedostoissa.
 
 ...
 ...
