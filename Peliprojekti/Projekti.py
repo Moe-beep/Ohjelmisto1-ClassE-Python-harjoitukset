@@ -1,23 +1,61 @@
 from functions import boat_task, boat_trash_cleanup, boat_oil_cleanup
 from functions import submarine_task, submarine_monster_fight
 from functions import shark_task
-from functions import quit, add_to_list, invalid_tarkistu, completed_tasks, boat_supplies, submarine_supplies, Character, save_choice
-from functions import check_name
+from functions import quit, add_to_list, invalid_tarkistu, completed_tasks, supplies, Character, save_choice,saved_transport,check_name
 import random
 import os
 
 #Check if theyhave played
 while True:
-    print("Have you played this game before")
-    name = input("Write the name you used while playing : ")
-    if check_name(name):
-        print("Yes, you have played the game before")
-    else:
-        print("Stop lying!!")
+    name_exist = False
+
+    print("Have you played this game before?")
+
+    name = input("Write the name you used while playing: ")
+
+    result,saved_transport = check_name(name)
+
+    if result == "transport_no":
+        name_exist = True
+        print("You have played before, but your transport is missing.")
+
+    elif result == "equipment_no":
+        name_exist = True
+        print("You have played before, but your equipment is missing.")
+        if saved_transport == "Boat":
+            boat_task()
+            boat_trash_cleanup()
+            boat_oil_cleanup()
+        elif saved_transport == "Submarine":
+            name_exist = True
+            submarine_task()
+            submarine_monster_fight()
+        elif saved_transport == "Shark":
+            name_exist = True
+            shark_task()
+
+    elif result == "tasks_no":
+        print("You have played before, but your completed tasks are missing.")
+        if saved_transport == "Boat":
+            boat_trash_cleanup()
+            boat_oil_cleanup()
+        elif saved_transport == "Submarine":
+            submarine_monster_fight()
+        elif saved_transport == "Shark":
+            shark_task()
+
+    elif result == "completed":
+        print("Yes, you have played the game before and you have completed the game!")
+        print("Play a new game")
+    elif result == False:
+        print("No saved game was found with that name.")
+        # Start a new game / create player here
     break
 
 ##Ask Name
 while True:
+    if name_exist == True:
+        break
     ##Kysy nimi käyttäjältä
     print("Mikä sinun nimesi on?")
     nimi = str(input())
@@ -37,7 +75,7 @@ while True:
     ##Writing name and age in file
     with open(".\\Peliprojekti\\save.txt", "a") as f:
         ika = str(ika)
-        f.write("\n" + "\n" + "name : " + nimi + "\n")
+        f.write("\n" + "\n" + "Name : " + nimi + "\n")
         f.write("Age : " + ika + "\n")
 
     print()

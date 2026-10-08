@@ -1,8 +1,8 @@
-from .common import quit, add_to_list, completed_tasks, submarine_supplies, Character, save_equipment,save_tasks
+from .common import quit, add_to_list, completed_tasks, supplies, Character, save_equipment,save_tasks
 
 import random
 
-submarine_supplies = []
+supplies = []
 def submarine_task():
     print("Ok, let's stock up on supplies for our submarine journey!")
     print("We are going to fight the sea monsters threatening the ocean.")
@@ -15,23 +15,23 @@ def submarine_task():
     print("3. Underwater camera")
     print("4. Extra fuel for the submarine")
 
-    while len(submarine_supplies) < 2:
+    while len(supplies) < 2:
         supply_choice = input("Choose a supply to add to your submarine, only 2 supplies can be chosen.")
         if supply_choice == "1":
-            add_to_list("Trash bags", submarine_supplies)
+            add_to_list("Trash bags", supplies)
             print("Trash bags added to your submarine supplies.")
         elif supply_choice == "2":
-            add_to_list("Spear gun", submarine_supplies)
+            add_to_list("Spear gun", supplies)
             print("Spear gun added to your submarine supplies.")
         elif supply_choice == "3":
-            add_to_list("Underwater camera", submarine_supplies)
+            add_to_list("Underwater camera", supplies)
             print("Underwater camera added to your submarine supplies.")
         elif supply_choice == "4":
-            add_to_list("Extra fuel for the submarine", submarine_supplies)
+            add_to_list("Extra fuel for the submarine", supplies)
             print("Extra fuel for the submarine added to your submarine supplies.")
         else:
             print("Invalid choice. Please choose 1, 2, 3, or 4.")
-    save_equipment(submarine_supplies)
+    save_equipment(supplies)
     print("Ok! Supplies are ready! Let's Roll!!")
 
 def submarine_monster_fight():
@@ -43,7 +43,7 @@ def submarine_monster_fight():
     print(f"It screams: {monster.scream}")
 
     while monster.health > 0:
-        if "Spear gun" in submarine_supplies:
+        if "Spear gun" in supplies:
             print("You have the spear gun. Let's use it to fight the sea monster!")
             attack = input("Type 1 to attack the sea monster: ")
             if attack == "1":
@@ -65,7 +65,7 @@ def submarine_monster_fight():
             submarine_refuel()
 
 def submarine_refuel():
-    if "Extra fuel for the submarine" in submarine_supplies:
+    if "Extra fuel for the submarine" in supplies:
         print("You have the extra fuel for the submarine. Let's use it to refuel the submarine!")
         print("The submarine is refueled and we can continue our journey!")
         completed_tasks.append("Submarine Refuel")
