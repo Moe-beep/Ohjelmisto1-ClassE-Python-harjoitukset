@@ -19,8 +19,7 @@ while True:
     result,saved_transport = check_name(name)
 
     if result == "transport_no":
-        name_exist = True
-        print("You have played before, but your transport is missing.")
+        print("You have only name and age entered, Let's play all the way from the start!")
 
     elif result == "equipment_no":
         name_exist = True
@@ -61,18 +60,22 @@ while True:
     ##Kysy nimi käyttäjältä
     print("Mikä sinun nimesi on?")
     nimi = str(input())
+    if nimi.lower() == "quit":
+        quit()
     if invalid_tarkistu(nimi):
         continue
 
     print("Mikä on sinun ikäsi?")
-    ika = int(input())
+    ika = input()
+    if ika.lower() == "quit":
+        quit()
     if invalid_tarkistu(ika):
         continue
 
     ##Kysy käyttäjän ika
-    if(ika < 6):
-        print("You are too young to help me!!!")
-        break
+    #if(ika < 6):
+        #print("You are too young to help me!!!")
+        #break
 
     ##Writing name and age in file
     with open(".\\Peliprojekti\\save.txt", "a") as f:

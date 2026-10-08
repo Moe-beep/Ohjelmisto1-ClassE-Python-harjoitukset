@@ -2,6 +2,7 @@ from .common import quit, add_to_list, completed_tasks, supplies, Character, sav
 
 import random
 
+##Choosing supplies
 def submarine_task():
     print("Ok, let's stock up on supplies for our submarine journey!")
     print("We are going to fight the sea monsters threatening the ocean.")
@@ -28,11 +29,14 @@ def submarine_task():
         elif supply_choice == "4":
             add_to_list("Extra fuel for the submarine", supplies)
             print("Extra fuel for the submarine added to your submarine supplies.")
+        elif supply_choice.lower() == "quit":
+            quit()
         else:
             print("Invalid choice. Please choose 1, 2, 3, or 4.")
     save_equipment(supplies)
     print("Ok! Supplies are ready! Let's Roll!!")
 
+##Using Character class
 def submarine_monster_fight():
     print("I see the sea Monster! It's green,big and scary!")
     m_name = str(input("What should we name the sea monster? "))
@@ -59,6 +63,9 @@ def submarine_monster_fight():
                     break
             elif attack.lower() == "quit":
                 quit()
+            else:
+                print()
+                print("Invalid answer!")
         else:
             print("")
             print("You don't have the spear gun. We can't fight the sea monster without it.")
@@ -71,12 +78,15 @@ def submarine_monster_fight():
             elif fuel.lower() == "n":
                 print()
                 submarine_refuel()
+            elif fuel.lower() == "quit":
+                quit()
             else:
                 print()
                 print("I don't understand! I will check myself")
                 submarine_refuel()
             break
 
+##Refuel
 def submarine_refuel():
     if "Extra fuel for the submarine" in supplies:
         print("You have the extra fuel for the submarine. Let's use it to refuel the submarine!")

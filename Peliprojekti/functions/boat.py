@@ -1,6 +1,7 @@
 import os
 from .common import quit, add_to_list, completed_tasks,supplies, save_equipment, save_tasks
 
+##Functon for choosing supplies
 def boat_task():
     ##this print the loction of the file of the method
     ##print(os.getcwd())
@@ -24,11 +25,14 @@ def boat_task():
         elif supply_choice == "4":
             add_to_list("Spear gun", supplies)
             print("Spear gun added to your boat supplies.")
+        elif supply_choice.lower() == "quit":
+            quit()
         else:
             print("Invalid choice. Please choose 1, 2, 3, or 4.")
     save_equipment(supplies)
     print("Ok! Supplies are ready! Let's Roll!!")
 
+#fist minigame of the gmae
 def boat_trash_cleanup():
     print("We are here at the trash cleanup site. Let's get to work!")
     print("Let's take out the trash bags and start picking up the trash in the ocean.")
@@ -64,6 +68,7 @@ def boat_trash_cleanup():
         print("You don't have the trash bags. We can't pick up the trash without them.")
         print("Let's just head to Oil spill cleanup site instead.")
 
+#second minigame
 def boat_oil_cleanup():
     print()
     print("We are here at the oil spill cleanup site. Let's get to work!")

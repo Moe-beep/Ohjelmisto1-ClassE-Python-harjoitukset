@@ -1,6 +1,7 @@
 from .common import quit, completed_tasks, Character, save_tasks, save_choice
 import random
 
+#Simple shark game
 def shark_task():
     print("Ok, We are going to call our shark friend to help us.")
     print("You tapped the water and the shark cam immediately.")
@@ -34,6 +35,11 @@ def shark_task():
                         completed_tasks.append("Pirate Fight")
                         save_tasks(completed_tasks)
                         break
+                elif attack.lower() == "quit":
+                    quit()
+                else:
+                    print()
+                    print("Invalid answer!! Type 1")
     elif choice == "2":
         print()
         print("You have chosen to fight the sea monsters. Let's go!")
@@ -52,10 +58,16 @@ def shark_task():
                         completed_tasks.append("Sea Monster Fight")
                         save_tasks(completed_tasks)
                         break
+                elif attack.lower() == "quit":
+                    quit()
+                else:
+                    print()
+                    print("Invalid answer! Type 1")
+    elif choice.lower() == "quit":
+        quit()
     else:
         print()
         print("Invalid choice. Please choose 1 or 2.")
-        save_tasks(completed_tasks)
 
     print("Baby shark came back from fighting and you united with them")
     print("PHEWW!! Saved the ocean once again")

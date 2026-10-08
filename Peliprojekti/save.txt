@@ -11,9 +11,14 @@ Transport choice : Submarine
 Equipments : Spear gun, Extra fuel for the submarine
 Completed tasks : Sea Monster Fight, Submarine Refuel
 
-
-
 Name : Miu
 Age : 43
 Transport choice : Shark
 Completed tasks : Trash Cleanup, Oil Spill Cleanup, Sea Monster Fight
+
+Name : miii
+Age : 32
+Transport choice : Submarine
+Equipments : Spear gun, Extra fuel for the submarine
+
+

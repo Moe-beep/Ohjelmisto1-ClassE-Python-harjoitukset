@@ -9,6 +9,7 @@ supplies = []
 completed_tasks = []
 
 ##Check if the player has played the game
+##Made me cry in the library btw
 saved_transport = ""
 line_to_delete = 0
 def check_name(name):
@@ -54,6 +55,7 @@ def check_name(name):
                     return "age_no"
                 elif not transport:
                     line_to_delete = 2
+                    delete_save(name)
                     return "transport_no", ""
                 elif not equipment:
                     line_to_delete = 3
@@ -80,11 +82,13 @@ def check_name(name):
                     return "completed", ""
     return False, ""
 
+##for the list not to be repetative
 def add_unique_items(target_list, items):
     for item in items.split(","):
         item = item.strip()
         if item and item not in target_list:
             target_list.append(item)
+
 ##delete the existing name so that player can write a new list  
 def delete_save(name):
     with open(".\\Peliprojekti\\save.txt", "r") as f:
@@ -97,7 +101,8 @@ def delete_save(name):
 
     with open(".\\Peliprojekti\\save.txt", "w") as f:
         f.writelines(lines)
-#save game
+
+#SAVE GAME / SAVE GAME / SAVE GAME / SAVE GAME
 def save_name_and_age(name,age):
     with open(".\\Peliprojekti\\save.txt", "a") as f:
         f.write("Name : " + name + "\n")
@@ -132,6 +137,7 @@ def quit():
     exit()
 
 ##Tarkistus funktio jos Input oli tyhjä tai ei
+##Also not used but hey, save it for nice memories and flashbacks
 def invalid_tarkistu(input):
     if(str(input) == ""):
         print("Virheellinen vastaus!!")
@@ -142,6 +148,8 @@ def invalid_tarkistu(input):
 
 
 ##Lisää listaan
+##Not used but not willing to delete because i might have used this at someplace
+##and I am not risking. Error might happen and debugging sucks!!
 def add_to_list(item,list):
     list.append(item)
     return list
