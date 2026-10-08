@@ -1,17 +1,19 @@
 
-
 Name : Moe
-Age : 23
-Transport choice : Boat
-Equipments : Trash bags, Oil spill cleanup kit
-Completed tasks : Trash Cleanup, Oil Spill CleanupName : Moe
-Age : 23
-Transport choice : Boat
-Equipments : Trash bags, Oil spill cleanup kit
-Completed tasks : Trash Cleanup, Oil Spill Cleanup
-
-Name : Mint
-Age : 23
+Age : 32
 Transport choice : Submarine
 Equipments : Spear gun, Extra fuel for the submarine
 Completed tasks : Trash Cleanup, Oil Spill Cleanup, Sea Monster Fight, Submarine Refuel
+
+Name : Mint
+Age : 32
+Transport choice : Submarine
+Equipments : Spear gun, Extra fuel for the submarine
+Completed tasks : Sea Monster Fight, Submarine Refuel
+
+
+
+Name : Miu
+Age : 43
+Transport choice : Shark
+Completed tasks : Trash Cleanup, Oil Spill Cleanup, Sea Monster Fight

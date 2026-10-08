@@ -2,7 +2,6 @@ from .common import quit, add_to_list, completed_tasks, supplies, Character, sav
 
 import random
 
-supplies = []
 def submarine_task():
     print("Ok, let's stock up on supplies for our submarine journey!")
     print("We are going to fight the sea monsters threatening the ocean.")
@@ -49,20 +48,34 @@ def submarine_monster_fight():
             if attack == "1":
                 damage = random.randint(10, 20)
                 monster.health -= damage
+                print("")
                 print(f"You attacked the sea monster and dealt {damage} damage! The sea monster has {monster.health} health points left.")
                 if monster.health <= 0:
+                    print("")
                     print("You have defeated the sea monster! Great job!")
                     completed_tasks.append("Sea Monster Fight")
                     print("Oh no! We are running out tof fuel after attacking!")
                     submarine_refuel()
                     break
-        elif attack.lower() == "quit":
-            quit()
+            elif attack.lower() == "quit":
+                quit()
         else:
+            print("")
             print("You don't have the spear gun. We can't fight the sea monster without it.")
             print("Let's run away!!")
             print("Ohh no. We are running out of fuel for the submarine. We need to refuel the submarine to continue our journey.")
-            submarine_refuel()
+            fuel = input("Did you bring extra fuel(Y/N)?")
+            if fuel.lower() == "y":
+                print()
+                submarine_refuel()
+            elif fuel.lower() == "n":
+                print()
+                submarine_refuel()
+            else:
+                print()
+                print("I don't understand! I will check myself")
+                submarine_refuel()
+            break
 
 def submarine_refuel():
     if "Extra fuel for the submarine" in supplies:

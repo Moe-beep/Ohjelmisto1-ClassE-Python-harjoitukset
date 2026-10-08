@@ -15,12 +15,15 @@ def check_name(name):
     #Globalizing the object
     global saved_transport
     global line_to_delete
+
+    supplies.clear()
+    completed_tasks.clear()
     with open(".\\Peliprojekti\\save.txt", "r") as f:
         lines = f.readlines()
 
     for i, line in enumerate(lines):
         if line.startswith("Name : "):
-            ##What his basically does is splitting the name line in 2 different sectors from : and
+            ##What this basically does is splitting the name line in 2 different sectors from : and
             ##[1]choose the name that will come later and strip() removes unecesssary blanks
             saved_name = line.split(":", 1)[1].strip()
 
@@ -65,26 +68,30 @@ def check_name(name):
                     save_name_and_age(name,age)
                     save_choice(transport)
                     save_equipment(supplies)
+                    add_unique_items(supplies,equipment)
                     return "tasks_no",transport
                 else:
                     line_to_delete = 5
-                    supplies.extend(item.strip() for item in equipment.split(","))
-                    completed_tasks.extend(task.strip() for task in tasks.split(","))
+                    add_unique_items(supplies,equipment)
+                    add_unique_items(completed_tasks,tasks)
+                    ##The line of code i used before just in case
+                    ##completed_tasks.extend(task.strip() for task in tasks.split(","))
                     delete_save(name)
-                    save_name_and_age(name,age)
-                    save_choice(transport)
-                    save_equipment(supplies)
-                    save_tasks(completed_tasks)
                     return "completed", ""
     return False, ""
 
-
+def add_unique_items(target_list, items):
+    for item in items.split(","):
+        item = item.strip()
+        if item and item not in target_list:
+            target_list.append(item)
+##delete the existing name so that player can write a new list  
 def delete_save(name):
     with open(".\\Peliprojekti\\save.txt", "r") as f:
         lines = f.readlines()
 
     for i, line in enumerate(lines):
-        if line.startswith("name : " + name):
+        if line.startswith("Name : " + name):
             del lines[i:i+line_to_delete]
             break
 

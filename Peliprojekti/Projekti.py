@@ -10,6 +10,9 @@ while True:
     name_exist = False
 
     print("Have you played this game before?")
+    play = input("Answer Y/N : ")
+    if play.lower() == "n":
+        break
 
     name = input("Write the name you used while playing: ")
 
@@ -27,14 +30,13 @@ while True:
             boat_trash_cleanup()
             boat_oil_cleanup()
         elif saved_transport == "Submarine":
-            name_exist = True
             submarine_task()
             submarine_monster_fight()
         elif saved_transport == "Shark":
-            name_exist = True
             shark_task()
 
     elif result == "tasks_no":
+        name_exist = True
         print("You have played before, but your completed tasks are missing.")
         if saved_transport == "Boat":
             boat_trash_cleanup()

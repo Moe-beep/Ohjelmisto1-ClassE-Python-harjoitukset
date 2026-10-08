@@ -3,7 +3,7 @@ from .common import quit, add_to_list, completed_tasks,supplies, save_equipment,
 
 def boat_task():
     ##this print the loction of the file of the method
-    print(os.getcwd())
+    ##print(os.getcwd())
     with open(".\\Peliprojekti\\info.txt", "r") as file:
         lines = file.readlines()
         ##this join print lines one by one
@@ -39,8 +39,11 @@ def boat_trash_cleanup():
         i = 0
         while i<5:
             i += 1
+            print()
             pick_up = input("Type 1 to pick up trashes: ")
+            print()
             if pick_up == "1":
+                
                 if i < 3:
                     print(f"Good job!Keep going!")
                 elif i == 3:
@@ -54,12 +57,15 @@ def boat_trash_cleanup():
             elif pick_up.lower() == "quit":
                 quit()
             else:
+                print()
                 print("Invalid choice. Please type 1 to pick up trashes.")
     else:
+        print()
         print("You don't have the trash bags. We can't pick up the trash without them.")
         print("Let's just head to Oil spill cleanup site instead.")
 
 def boat_oil_cleanup():
+    print()
     print("We are here at the oil spill cleanup site. Let's get to work!")
     print("Let's take out the oil spill cleanup kit and start cleaning up the oil spill in the ocean.")
 
@@ -70,7 +76,9 @@ def boat_oil_cleanup():
         i = 0
         while i<5:
             i += 1
+            print()
             clean_up = input("Type 1 to clean up the oil spill: ")
+            print()
             if clean_up == "1":
                 if i < 3:
                     print(f"Good job!Keep going!")
@@ -87,9 +95,11 @@ def boat_oil_cleanup():
             elif clean_up.lower() == "quit":
                 quit()
             else:
+                print()
                 print("Invalid choice. Please type 1 to clean up the oil spill.")
                 save_tasks(completed_tasks)
     else:
+        print()
         print("You don't have the oil spill cleanup kit. We can't clean up the oil spill without it.")
         print("Let's just head home and save the ocean another day. Good job for trying!")    
         save_tasks(completed_tasks)

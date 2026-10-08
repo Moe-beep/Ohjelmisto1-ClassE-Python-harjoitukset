@@ -20,12 +20,14 @@ def shark_task():
         pirate = Character("Pirate", health)
 
         while True:
+            print()
             attacks = {"Twisted shark bite": 20, "swift tail slap": 15, "Jump and slam": 30}
             if pirate.health > 0:
                 attack = input("Type 1 to attack the pirate: ")
                 if attack == "1":
                     attack_name, damage = random.choice(list(attacks.items()))
                     pirate.health -= damage
+                    print()
                     print(f"You used {attack_name} and dealt {damage} damage! The pirate has {pirate.health} health points left.")
                     if pirate.health <= 0:
                         print("You have defeated the pirate! Great job!")
@@ -33,6 +35,7 @@ def shark_task():
                         save_tasks(completed_tasks)
                         break
     elif choice == "2":
+        print()
         print("You have chosen to fight the sea monsters. Let's go!")
         monster_health = random.randint(50, 100)
         monster = Character("Sea Monster", monster_health)
@@ -50,6 +53,7 @@ def shark_task():
                         save_tasks(completed_tasks)
                         break
     else:
+        print()
         print("Invalid choice. Please choose 1 or 2.")
         save_tasks(completed_tasks)
 
