@@ -2,10 +2,21 @@ from functions import boat_task, boat_trash_cleanup, boat_oil_cleanup
 from functions import submarine_task, submarine_monster_fight
 from functions import shark_task
 from functions import quit, add_to_list, invalid_tarkistu, completed_tasks, boat_supplies, submarine_supplies, Character, save_choice
+from functions import check_name
 import random
 import os
 
+#Check if theyhave played
+while True:
+    print("Have you played this game before")
+    name = input("Write the name you used while playing : ")
+    if check_name(name):
+        print("Yes, you have played the game before")
+    else:
+        print("Stop lying!!")
+    break
 
+##Ask Name
 while True:
     ##Kysy nimi käyttäjältä
     print("Mikä sinun nimesi on?")

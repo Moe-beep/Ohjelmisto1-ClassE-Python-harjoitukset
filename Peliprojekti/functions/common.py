@@ -5,6 +5,21 @@ class Character:
         self.health = health
         self.scream = scream
 
+
+##Check if the player has played the game
+def check_name(name):
+    with open(".\\Peliprojekti\\save.txt", "r") as f:
+        for line in f:
+            if line.startswith("name : "):
+                ##What his basically does is splitting the name line in 2 different sectors from : and
+                ##[1]choose the name that will come later and strip() removes unecesssary blanks
+                saved_name = line.split(":", 1)[1].strip()
+
+                if saved_name.lower() == name:
+                    return True
+    return False
+
+
 #save game
 def save_choice(name):
     with open(".\\Peliprojekti\\save.txt", "a") as f:
