@@ -10,6 +10,9 @@ Kun peli aloitetaan, jos pelaaja on pelannut peliä aiemmin, hän voi yksinkerta
 
 Pelaajilla on pelissä kolme eri polkua, jotka he voivat pelata läpi. Pitäkää hauskaa!!
 
+## Varo
+Tee tiedostolle commit pelaamisen jälkeen, sillä save.txt päivittyy jokaisella pelikerralla ja aiheuttaa virheen, jos muutoksia ei tallenneta versionhallintaan.
+
 # Koodit
 ## Tiedostojen järjestäminen
 
