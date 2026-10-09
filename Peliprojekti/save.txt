@@ -37,3 +37,24 @@ Age : 14
 Transport choice : Submarine
 Equipments : Spear gun, Extra fuel for the submarine
 Completed tasks : Trash Cleanup, Oil Spill Cleanup, Sea Monster Fight, Submarine Refuel, Sea Monster Fight, Submarine Refuel
+
+Completed tasks : Sea Monster FightName : aino
+Age : 100
+Transport choice : Shark
+Completed tasks : Pirate Fight
+
+
+
+Name : moe
+Age : 23
+Transport choice : Submarine
+Equipments : Spear gun, Extra fuel for the submarine
+Completed tasks : Trash Cleanup, Oil Spill Cleanup, Sea Monster Fight, Submarine Refuel, Sea Monster Fight, Submarine Refuel
+
+
+
+Name : elmo
+Age : 19
+Transport choice : Submarine
+Equipments : Spear gun, Extra fuel for the submarine
+Completed tasks : Sea Monster Fight, Sea Monster Fight, Submarine Refuel
