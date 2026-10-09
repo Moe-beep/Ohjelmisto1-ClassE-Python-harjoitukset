@@ -4,6 +4,7 @@ import random
 
 ##Choosing supplies
 def submarine_task():
+    supplies.clear()
     print("Ok, let's stock up on supplies for our submarine journey!")
     print("We are going to fight the sea monsters threatening the ocean.")
     print("Let's choose the right tools and equipment for our mission.")
@@ -59,7 +60,19 @@ def submarine_monster_fight():
                     print("You have defeated the sea monster! Great job!")
                     completed_tasks.append("Sea Monster Fight")
                     print("Oh no! We are running out tof fuel after attacking!")
-                    submarine_refuel()
+                    fuel = input("Did you bring extra fuel(Y/N)?")
+                    if fuel.lower() == "y":
+                        print()
+                        submarine_refuel()
+                    elif fuel.lower() == "n":
+                        print()
+                        submarine_refuel()
+                    elif fuel.lower() == "quit":
+                        quit()
+                    else:
+                        print()
+                        print("I don't understand! I will check myself")
+                        submarine_refuel()
                     break
             elif attack.lower() == "quit":
                 quit()

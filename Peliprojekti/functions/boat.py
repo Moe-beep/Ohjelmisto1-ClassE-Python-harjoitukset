@@ -3,6 +3,7 @@ from .common import quit, add_to_list, completed_tasks,supplies, save_equipment,
 
 ##Functon for choosing supplies
 def boat_task():
+    supplies.clear()
     ##this print the loction of the file of the method
     ##print(os.getcwd())
     with open(".\\Peliprojekti\\info.txt", "r") as file:

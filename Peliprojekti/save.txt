@@ -22,3 +22,18 @@ Transport choice : Submarine
 Equipments : Spear gun, Extra fuel for the submarine
 
 
+
+
+
+
+
+
+
+
+
+
+Name : laura
+Age : 14
+Transport choice : Submarine
+Equipments : Spear gun, Extra fuel for the submarine
+Completed tasks : Trash Cleanup, Oil Spill Cleanup, Sea Monster Fight, Submarine Refuel, Sea Monster Fight, Submarine Refuel
